@@ -4,9 +4,9 @@ import './style.css';
 class Footer extends Component {
     render() {
         return (
-            <footer>
+            <footer onClick={this.props.buttonClicked}>
                 <div className="inner-footer">
-                    <a href="#" className="load-more">Load More</a>
+                    <button className="load-more">Load More</button>
                 </div>
             </footer>
                 )
