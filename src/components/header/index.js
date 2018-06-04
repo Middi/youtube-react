@@ -6,8 +6,8 @@ class Header extends Component {
     render() {
         return (
             <header>
-                <div class="inner-header">
-                    <img class="header-logo" src={Logo} alt="youtube logo" />
+                <div className="inner-header">
+                    <img className="header-logo" src={Logo} alt="youtube logo" />
                 </div>
             </header>
         )

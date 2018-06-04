@@ -5,8 +5,8 @@ class Footer extends Component {
     render() {
         return (
             <footer>
-                <div class="inner-footer">
-                    <a href="#" class="load-more">Load More</a>
+                <div className="inner-footer">
+                    <a href="#" className="load-more">Load More</a>
                 </div>
             </footer>
                 )
