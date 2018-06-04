@@ -1,0 +1,33 @@
+section {
+  background-color: #e9e9e9;
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+  top: 50px; }
+
+.inner-section {
+  height: auto;
+  box-sizing: border-box;
+  max-width: 540px;
+  margin: 0 auto;
+  border-left: 1px solid #b4babe;
+  border-right: 1px solid #b4babe; }
+
+.wrapper {
+  max-width: 540px;
+  overflow: hidden;
+  margin: 0 auto; }
+
+.videoWrapper {
+  position: relative;
+  padding-bottom: 54%;
+  /* 16:9 */
+  padding-top: 12px;
+  height: 0; }
+
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }

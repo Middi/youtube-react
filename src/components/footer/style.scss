@@ -1,0 +1,49 @@
+$white: rgba(246, 246, 246, 1.0);
+$border: rgba(180, 186, 190, 1.0);
+$dark: rgba(47, 57, 64, 1.0);
+$light: rgba(158, 169, 178, 1.0);
+$hover: rgba(232, 232, 232, 1.0);
+
+@mixin font-base {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.2;
+    font-weight: 500;
+}
+
+.inner-footer {
+    max-width: 540px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    background-color: $white;
+    border: 1px solid $border;
+    border-top: none;
+    box-sizing: border-box;
+    padding-top: 20px;
+    height: 140px;
+    align-items: flex-start;
+}
+
+.inner-section {
+    height: auto;
+    box-sizing: border-box;
+    max-width: 540px;
+    margin: 0 auto;
+    border-left: 1px solid $border;
+    border-right: 1px solid $border;
+}
+
+
+.load-more {
+    @include font-base;
+    color: $dark;
+    border: 1px solid $border;
+    padding: 10px 14px;
+    border-radius: 4px;
+    &:hover {background-color: $hover}
+}
+
+.disabled {
+    color: $light;
+    &:hover {background-color: $white}
+}
