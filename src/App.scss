@@ -1,3 +1,10 @@
+$white: rgba(246, 246, 246, 1.0);
+$border: rgba(180, 186, 190, 1.0);
+$brand : rgba(237, 164, 163, 0.8);
+$dark: rgba(47, 57, 64, 1.0);
+$light: rgba(158, 169, 178, 1.0);
+$hover: rgba(232, 232, 232, 1.0);
+
 // --------------------------------------------------
 // Normalise
 // --------------------------------------------------
@@ -73,3 +80,11 @@ input, select {
 }
 
 a:focus, button:focus {outline: none}
+
+
+/*----------  Break Point 1 - 500px  ----------*/
+
+
+@media only screen and (max-width: 500px) {
+    body {font-size: 14px}
+}

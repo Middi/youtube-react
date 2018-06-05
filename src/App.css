@@ -53,3 +53,8 @@ input, select {
 
 a:focus, button:focus {
   outline: none; }
+
+/*----------  Break Point 1 - 500px  ----------*/
+@media only screen and (max-width: 500px) {
+  body {
+    font-size: 14px; } }

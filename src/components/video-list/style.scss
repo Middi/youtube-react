@@ -34,3 +34,21 @@ main {
     text-align: center;
  }
  
+/*----------  Break Point 1 - 500px  ----------*/
+
+
+@media only screen and (max-width: 500px) {
+
+    main {border: none}
+
+    main {padding: 330px 4px 10px}
+}
+
+
+/*----------  Break Point 1 - 400px  ----------*/
+
+
+@media only screen and (max-width: 400px) {
+    
+    main {padding: 270px 4px 10px}
+}
