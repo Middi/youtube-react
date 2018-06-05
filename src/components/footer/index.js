@@ -6,7 +6,9 @@ class Footer extends Component {
         return (
             <footer onClick={this.props.buttonClicked}>
                 <div className="inner-footer">
-                    <button className="load-more">Load More</button>
+                    <button className={
+                        this.props.results ? 'load-more' : 'load-more disabled'
+                    }>{this.props.results ? 'Load More' : 'No More Results'}</button>
                 </div>
             </footer>
                 )

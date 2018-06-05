@@ -7,7 +7,7 @@ class VideoItem extends Component {
         return (
             <article onClick={ () => this.props.itemClicked(video.resourceId.videoId)}>
                 <div className="thumb-container">
-                    <img src={video.thumbnails.medium.url} className="thumb" />
+                    <img src={video.thumbnails.medium.url} className="thumb" alt="Video Thumbnail" />
                 </div>
                 <div className="vid-details">
                     <h1>{video.title}</h1>

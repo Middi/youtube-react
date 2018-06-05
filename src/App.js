@@ -11,7 +11,7 @@ class App extends Component {
         
     this.state = {
       videos: [],
-      currentVideo: '',
+      currentVideo: 'qxWrnhZEuRU',
       pageToken: null
     };
   }
@@ -21,9 +21,7 @@ class App extends Component {
     const playlistId = 'PL2fnLUTsNyq7A335zB_RpOzu7hEUcSJbB';
     
     const token = this.state.pageToken ? `&pageToken=${this.state.pageToken}` : '';
-    const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=PL2fnLUTsNyq7A335zB_RpOzu7hEUcSJbB&key=AIzaSyAdWPrZkJp9w08250h7nWu7Y4xiLDUzkeY&maxResults=10${token}`;
-
-    console.log(url);
+    const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${playlistId}&key=${key}&maxResults=10${token}`;
 
     fetch(url)
     .then(res => res.json())
@@ -33,7 +31,6 @@ class App extends Component {
       let previousState = {
         ...this.state,
         videos: toReturn,
-        currentVideo: data.items[0].snippet.resourceId.videoId,
         pageToken: data.nextPageToken
       }
       this.setState(...this.state, previousState)
@@ -43,18 +40,13 @@ class App extends Component {
   componentDidMount() {
     this.fetchVids();
   }
-
-  // fetchVids = (token) => {
-  //   this.setState({pageToken: token})
-  // }
   
   itemClicked = (id) => {
     this.setState({currentVideo: id})
   }; 
 
-  buttonClicked = () => {
-    this.fetchVids();
-  }; 
+  buttonClicked = () => 
+    this.state.pageToken ? this.fetchVids() : null; 
 
   render() {
     return (
@@ -65,7 +57,7 @@ class App extends Component {
             <MainVideo video={this.state.currentVideo}/> : null
         }
         <VideoList itemClicked={this.itemClicked} videos={this.state.videos}/>
-        <Footer buttonClicked={this.buttonClicked} />
+        <Footer buttonClicked={this.buttonClicked} results={this.state.pageToken} />
       
       </div>
     );
