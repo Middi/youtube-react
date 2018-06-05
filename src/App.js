@@ -17,7 +17,7 @@ class App extends Component {
   }
 
   fetchVids = () => {
-    const key = 'AIzaSyAdWPrZkJp9w08250h7nWu7Y4xiLDUzkeY';
+    const key = 'AIzaSyAdWPrZkJp9w0825LDUzkeY';
     const playlistId = 'PL2fnLUTsNyq7A335zB_RpOzu7hEUcSJbB';
     
     const token = this.state.pageToken ? `&pageToken=${this.state.pageToken}` : '';
