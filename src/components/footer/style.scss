@@ -37,15 +37,18 @@ $hover: rgba(232, 232, 232, 1.0);
 .load-more {
     @include font-base;
     color: $dark;
+    font-size: 1em;
     background-color: $white;
     border: 1px solid $border;
     padding: 10px 14px;
     border-radius: 4px;
+    cursor: pointer;
     &:hover {background-color: $hover}
 }
 
 .disabled {
     color: $light;
+    cursor: not-allowed;
     &:hover {background-color: $white}
 }
 
