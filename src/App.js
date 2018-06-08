@@ -26,7 +26,6 @@ class App extends Component {
     fetch(url)
     .then(res => res.json())
     .then(data => {
-      console.log(data)
       let toReturn = this.state.videos.concat(data.items.map(item => item.snippet));
 
       let previousState = {
