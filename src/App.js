@@ -17,7 +17,7 @@ class App extends Component {
   }
 
   fetchVids = () => {
-    const key = 'KEY';
+    const key = 'AIzaSyAdWPrZkJp9w08250h7nWu7Y4xiLDUzkeY';
     const playlistId = 'PL2fnLUTsNyq7A335zB_RpOzu7hEUcSJbB';
     
     const token = this.state.pageToken ? `&pageToken=${this.state.pageToken}` : '';
@@ -26,6 +26,7 @@ class App extends Component {
     fetch(url)
     .then(res => res.json())
     .then(data => {
+      console.log(data)
       let toReturn = this.state.videos.concat(data.items.map(item => item.snippet));
 
       let previousState = {
@@ -35,6 +36,7 @@ class App extends Component {
       }
       this.setState(...this.state, previousState)
     })
+    .catch(err => console.log(err))
   }
 
   componentDidMount() {
