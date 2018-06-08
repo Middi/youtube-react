@@ -17,7 +17,7 @@ class App extends Component {
   }
 
   fetchVids = () => {
-    const key = 'AIzaSyBvqZnD5hy2_wjMoJwPz3xPDAz4l0wet8c';
+    const key = process.env.REACT_APP_WEATHER_API_KEY;
     const playlistId = 'PL2fnLUTsNyq7A335zB_RpOzu7hEUcSJbB';
     
     const token = this.state.pageToken ? `&pageToken=${this.state.pageToken}` : '';
